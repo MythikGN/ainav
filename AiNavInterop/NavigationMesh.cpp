@@ -2,9 +2,13 @@
 
 #include "Navigation.hpp"
 #include "NavigationMesh.hpp"
+#if LINUXBUILD
+#include <memory.h>
+#else
 #include <corecrt_memory.h>
+#endif
 #include <DetourCommon.h>
-#include <memory>
+#include <vector>
 
 static float frand()
 {

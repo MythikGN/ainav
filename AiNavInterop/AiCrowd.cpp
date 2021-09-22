@@ -1,3 +1,6 @@
+#if LINUXBUILD
+#include <cstring>
+#endif
 #include "AiCrowd.hpp"
 
 AiCrowd::AiCrowd()

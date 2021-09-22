@@ -1,7 +1,9 @@
 #include "NavigationMesh.hpp"
 #include "AiQuery.hpp"
 #include <DetourCommon.h>
-
+#if LINUXBUILD
+#include <vector>
+#endif
 static float frand()
 {
 	return (float)rand() / (float)RAND_MAX;

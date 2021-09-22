@@ -25,7 +25,12 @@
 
 #include "Navigation.hpp"
 #include "NavigationBuilder.hpp"
+#if LINUXBUILD
+#include <memory.h>
+#else
 #include <corecrt_memory.h>
+#endif
+
 #include <math.h>
 
 NavigationBuilder::NavigationBuilder()

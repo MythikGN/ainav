@@ -6,7 +6,12 @@
 #include "AiQuery.hpp"
 
 #ifdef AINAV_EXPORTS
+#if LINUXBUILD
+#define AINAV_API __attribute__((visibility("default")))
+#else
 #define AINAV_API __declspec(dllexport)
+#endif
+
 #else
 #define AINAV_API __declspec(dllimport)
 #endif
